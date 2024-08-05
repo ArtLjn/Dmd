@@ -32,7 +32,7 @@ RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list && 
     sed -i 's/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/' /etc/mysql/mysql.conf.d/mysqld.cnf && \
     service mysql restart && \
     apt install -y nginx && \
-    apt install default-jdk
+#    apt install default-jdk
 
 RUN cp -f ./deploy/nginx.conf /etc/nginx/nginx.conf
 WORKDIR /root/deploy/back
